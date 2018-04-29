@@ -30,7 +30,7 @@
     <target name="build" description="Compile main source tree java files">
         <echo message="starting"/>
         <mkdir dir="${build.dir}"/>
-        <javac destdir="${build.dir}" source="1.6" target="1.6" debug="true"
+        <javac destdir="/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/javac" source="1.8" target="1.8" debug="true"
                deprecation="false" optimize="false" failonerror="true" includeantruntime="false">
             <src path="${src.dir}"/>
             <classpath refid="master-classpath"/>
