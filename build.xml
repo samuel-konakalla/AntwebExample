@@ -28,6 +28,7 @@
     </target>
 
     <target name="build" description="Compile main source tree java files">
+        <echo message="starting"/>
         <mkdir dir="${build.dir}"/>
         <javac destdir="${build.dir}" source="1.6" target="1.6" debug="true"
                deprecation="false" optimize="false" failonerror="true" includeantruntime="false">
@@ -37,6 +38,7 @@
     </target>
 
     <target name="package" depends="build" description="Package a war file">
+        <echo message="war starting "/>
         <war destfile="${web.dir}/ROOT.war"
              webxml="${web.dir}/WEB-INF/web.xml">
             <fileset dir="${web.dir}">
